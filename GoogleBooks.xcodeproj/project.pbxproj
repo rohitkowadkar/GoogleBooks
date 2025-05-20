@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F97D61C02DDC35AC0069E74B /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F97D61BF2DDC35AC0069E74B /* SDWebImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F97D61992DDC231C0069E74B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97D61C02DDC35AC0069E74B /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = GoogleBooks;
 			packageProductDependencies = (
+				F97D61BF2DDC35AC0069E74B /* SDWebImage */,
 			);
 			productName = GoogleBooks;
 			productReference = F97D617F2DDC23180069E74B /* GoogleBooks.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = F97D61762DDC23180069E74B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F97D61BE2DDC35AC0069E74B /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F97D61802DDC23180069E74B /* Products */;
 			projectDirPath = "";
@@ -563,6 +572,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F97D61BE2DDC35AC0069E74B /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F97D61BF2DDC35AC0069E74B /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F97D61BE2DDC35AC0069E74B /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F97D61772DDC23180069E74B /* Project object */;
 }

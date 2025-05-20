@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class BookListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bookCoverImageView: UIImageView!
@@ -27,6 +27,14 @@ class BookListTableViewCell: UITableViewCell {
     
     func configureCell(for book: BookModel) {
         
+        if let thumbnailUrlStr = book.imageLinks["smallThumbnail"] {
+            bookCoverImageView.sd_setImage(with: URL.init(string: thumbnailUrlStr))
+        }
         
+        bookNameLabel.text = book.title
+        autherLabel.text = book.auther
+        
+        getButton.layer.cornerRadius = 5
+        getButton.layer.masksToBounds = true
     }
 }

@@ -20,11 +20,16 @@
                                 <rect key="frame" x="0.0" y="162" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3ac-96-36u">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3ac-96-36u" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8TL-IM-haZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eyL-SE-33B" secondAttribute="trailing" id="RV2-c1-94c"/>
+                            <constraint firstItem="3ac-96-36u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RoL-jh-e1M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eyL-SE-33B" secondAttribute="bottom" id="UiL-Wm-1ia"/>
                             <constraint firstItem="eyL-SE-33B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y7H-O6-QKb"/>
                             <constraint firstItem="eyL-SE-33B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m3h-1X-31C"/>
@@ -32,6 +37,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oDZ-q8-MJ8"/>
                     <connections>
+                        <outlet property="activityIndication" destination="3ac-96-36u" id="BgA-et-Who"/>
                         <outlet property="tableView" destination="eyL-SE-33B" id="neH-JE-cZD"/>
                     </connections>
                 </viewController>

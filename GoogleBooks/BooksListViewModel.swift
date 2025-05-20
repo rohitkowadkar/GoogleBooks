@@ -10,6 +10,7 @@ protocol BookListDelegate : AnyObject {
     
     func didReceiveBookList()
     func didFailToReceiveBookList(with errorMessage:String)
+    func isLoading(showLoader: Bool)
     
 }
 
@@ -21,7 +22,9 @@ class BooksListViewModel {
     }
     
     func getInitialBookList() {
+        self.delegates?.isLoading(showLoader: true)
         apiHandler.getBookListFromGoogleAPI { result in
+            self.delegates?.isLoading(showLoader: false)
             switch result {
                 
             case .success(let books):

@@ -49,10 +49,12 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jKx-aY-2Zi" secondAttribute="bottom" constant="60.333333333333343" id="18p-ls-QXY"/>
                     <constraint firstAttribute="trailing" secondItem="A1b-zF-Mr4" secondAttribute="trailing" constant="20" id="6g5-gO-wUI"/>
                     <constraint firstItem="A1b-zF-Mr4" firstAttribute="centerY" secondItem="T5U-He-OY6" secondAttribute="centerY" id="Ebq-LV-1L6"/>
                     <constraint firstItem="T5U-He-OY6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="R8I-Sl-7Xk"/>
                     <constraint firstItem="jKx-aY-2Zi" firstAttribute="leading" secondItem="T5U-He-OY6" secondAttribute="trailing" constant="20" id="fDM-NZ-8QK"/>
+                    <constraint firstItem="jKx-aY-2Zi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="60.333333333333329" id="fxY-5Y-i7o"/>
                     <constraint firstItem="T5U-He-OY6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ri0-Lk-39i"/>
                     <constraint firstItem="jKx-aY-2Zi" firstAttribute="centerY" secondItem="T5U-He-OY6" secondAttribute="centerY" id="xmE-X3-n00"/>
                 </constraints>
