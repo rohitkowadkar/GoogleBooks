@@ -6,7 +6,13 @@
 //
 
 import UIKit
-
+/*BookModel
+  - imageLinks
+ - title
+ - authers[]
+ - pageCount
+  ListVM
+*/
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
