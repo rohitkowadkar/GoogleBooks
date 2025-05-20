@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailsViewController" customModule="GoogleBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="autherNameBtn" destination="njm-rb-elD" id="bSe-hq-xFI"/>
+                <outlet property="bookMainImageView" destination="ELr-ck-uF9" id="hW8-1v-gp1"/>
+                <outlet property="bookNameLabel" destination="r5g-gR-gDv" id="NZj-8h-uup"/>
+                <outlet property="categoryLabel" destination="kaf-7m-Ie2" id="RMW-zt-HZm"/>
+                <outlet property="closeButton" destination="tFL-bd-MAI" id="f1N-kU-MoT"/>
+                <outlet property="getButton" destination="4dt-as-gEa" id="2la-YX-9k2"/>
+                <outlet property="subtitleLabel" destination="apI-0E-ARO" id="y1Z-kW-fyd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFL-bd-MAI">
+                    <rect key="frame" x="31" y="75" width="40" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5970253458" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8y3-HO-Zgf"/>
+                        <constraint firstAttribute="width" constant="40" id="jFd-79-nV5"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="Owv-dA-DBt"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELr-ck-uF9">
+                    <rect key="frame" x="76" y="128" width="240" height="360"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ELr-ck-uF9" secondAttribute="height" multiplier="1:1.5" id="j8u-Tg-LPl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Girl On The Boat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5g-gR-gDv">
+                    <rect key="frame" x="20" y="518" width="353" height="27.666666666666629"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27.666666666666629" id="f6Q-f6-Cd8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="The Wizard Behind Harry Potter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apI-0E-ARO">
+                    <rect key="frame" x="20" y="555.66666666666663" width="353" height="60.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njm-rb-elD">
+                    <rect key="frame" x="131" y="613" width="131.33333333333337" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="0I7-vF-rNw"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Kate Hewitt &gt; "/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2In-KI-jWC">
+                    <rect key="frame" x="30" y="684" width="333" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chq-Mi-Fqr">
+                            <rect key="frame" x="18" y="7.9999999999999982" width="39" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240 Pages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu7-w1-mWO">
+                            <rect key="frame" x="18.000000000000004" y="27.333333333333368" width="60.333333333333343" height="14.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.59702534578284439" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Ya-EX-vX0">
+                            <rect key="frame" x="15" y="56.666666666666629" width="303" height="34.333333333333343"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1I-oD-kwL">
+                                    <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="34.333333333333336"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="tinted" image="book.pages" catalog="system" title="Sample"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-as-gEa">
+                                    <rect key="frame" x="156.66666666666663" y="0.0" width="146.33333333333337" height="34.333333333333336"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="tinted" title="Get"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Z1I-oD-kwL" firstAttribute="width" secondItem="4dt-as-gEa" secondAttribute="width" id="dXt-rf-gfL"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2196078431372549" green="0.10588235294117647" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="7Ya-EX-vX0" firstAttribute="leading" secondItem="2In-KI-jWC" secondAttribute="leading" constant="15" id="4Sm-R7-U7Q"/>
+                        <constraint firstAttribute="height" constant="100" id="5wq-Zp-v76"/>
+                        <constraint firstItem="Xu7-w1-mWO" firstAttribute="leading" secondItem="chq-Mi-Fqr" secondAttribute="leading" id="8Rn-nb-qaF"/>
+                        <constraint firstItem="chq-Mi-Fqr" firstAttribute="leading" secondItem="2In-KI-jWC" secondAttribute="leading" constant="18" id="MO6-SU-ZK2"/>
+                        <constraint firstAttribute="trailing" secondItem="7Ya-EX-vX0" secondAttribute="trailing" constant="15" id="Yxx-Rc-G5v"/>
+                        <constraint firstItem="Xu7-w1-mWO" firstAttribute="top" secondItem="chq-Mi-Fqr" secondAttribute="bottom" constant="-1" id="gbR-IU-f2v"/>
+                        <constraint firstItem="7Ya-EX-vX0" firstAttribute="top" secondItem="Xu7-w1-mWO" secondAttribute="bottom" constant="15" id="p1z-2S-l4n"/>
+                        <constraint firstItem="chq-Mi-Fqr" firstAttribute="top" secondItem="2In-KI-jWC" secondAttribute="top" constant="8" id="pM6-ws-2uC"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Wizard Behind Harry Potter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaf-7m-Ie2">
+                    <rect key="frame" x="20" y="649" width="353" height="20.333333333333371"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.333333333333371" id="oSF-JX-CxT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.11372549019607843" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tFL-bd-MAI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="31" id="07M-d0-GMh"/>
+                <constraint firstItem="kaf-7m-Ie2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0eh-Ny-CRG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="apI-0E-ARO" secondAttribute="trailing" constant="20" id="1JQ-FQ-Vo5"/>
+                <constraint firstItem="njm-rb-elD" firstAttribute="top" secondItem="apI-0E-ARO" secondAttribute="bottom" constant="-2.9999999999998863" id="4Z5-ru-hRh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r5g-gR-gDv" secondAttribute="trailing" constant="20" id="880-ke-N0J"/>
+                <constraint firstItem="ELr-ck-uF9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="76" id="9ca-xt-ECS"/>
+                <constraint firstItem="r5g-gR-gDv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9k0-iq-hXX"/>
+                <constraint firstItem="ELr-ck-uF9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="BcH-AX-reW"/>
+                <constraint firstItem="2In-KI-jWC" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="IoS-cy-70R"/>
+                <constraint firstItem="r5g-gR-gDv" firstAttribute="top" secondItem="ELr-ck-uF9" secondAttribute="bottom" constant="30" id="Mn0-C7-OLb"/>
+                <constraint firstItem="apI-0E-ARO" firstAttribute="top" secondItem="r5g-gR-gDv" secondAttribute="bottom" constant="10" id="O04-rP-zgl"/>
+                <constraint firstItem="apI-0E-ARO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OnX-6h-pyC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ELr-ck-uF9" secondAttribute="trailing" constant="77" id="TQ4-1D-seX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kaf-7m-Ie2" secondAttribute="trailing" constant="20" id="eJW-wG-IBg"/>
+                <constraint firstItem="njm-rb-elD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="imw-gj-WoP"/>
+                <constraint firstItem="kaf-7m-Ie2" firstAttribute="top" secondItem="njm-rb-elD" secondAttribute="bottom" constant="1" id="ixo-wj-KRd"/>
+                <constraint firstItem="2In-KI-jWC" firstAttribute="top" secondItem="kaf-7m-Ie2" secondAttribute="bottom" constant="14.666666666666629" id="knT-yC-JlX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="tFL-bd-MAI" secondAttribute="top" constant="43" id="lhd-N9-upb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2In-KI-jWC" secondAttribute="trailing" constant="30" id="vyq-uL-shn"/>
+                <constraint firstItem="2In-KI-jWC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="x83-Mi-rMz"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="book.pages" catalog="system" width="107" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

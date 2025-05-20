@@ -43,6 +43,15 @@ class ViewController: UIViewController {
     func fetchBookListData(){
         booksListVM.getInitialBookList()
     }
+    
+    func presentDetailViewControllerFor(bookModelObj: BookModel ){
+        let bookDetailsVC = BookDetailsViewController.init(nibName: "BookDetailsViewController", bundle: .main)
+        bookDetailsVC.bookModelObj = bookModelObj
+        bookDetailsVC.modalPresentationStyle = .popover
+        
+        self.present(bookDetailsVC, animated: true)
+        
+    }
 
 }
 
@@ -61,9 +70,10 @@ extension ViewController : UITableViewDataSource {
 
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        presentDetailViewControllerFor(bookModelObj: booksListVM.getBookItem(at: indexPath))
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
 }
 
 extension ViewController : BookListDelegate {

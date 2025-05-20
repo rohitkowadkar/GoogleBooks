@@ -9,6 +9,8 @@ import Foundation
 struct BookModel {
     let imageLinks : Dictionary<String,String>
     let title : String
+    let subTitle : String
+    let category : String
     let auther: String
     let pageCount : Int
     
@@ -66,12 +68,18 @@ class BooksAPIHandler {
         for (_,book) in bookItemsArray.enumerated() {
             if let volumeInfo = book["volumeInfo"] as? Dictionary<String,Any> {
                 var title = ""
+                var subTitle = ""
+                var category = ""
                 var imageLinks : [String : String] = [:]
                 var auther = ""
                 var pageCount = 0
                 
                 if let bookTitle = volumeInfo["title"] as? String {
                     title = bookTitle
+                }
+                
+                if let bookSubTitle = volumeInfo["subtitle"] as? String {
+                    subTitle = bookSubTitle
                 }
                 
                 if let bookImageLinks = volumeInfo["imageLinks"] as? Dictionary<String,String> {
@@ -84,11 +92,17 @@ class BooksAPIHandler {
                     }                    
                 }
                 
+                if let categories = volumeInfo["categories"] as? [String] {
+                    if !categories.isEmpty {
+                        category = categories.first ?? ""
+                    }
+                }
+                
                 if let bookPageCount = volumeInfo["pageCount"] as? Int {
                     pageCount = bookPageCount
                 }
                 
-                bookModelArray.append(BookModel(imageLinks: imageLinks, title: title, auther: auther, pageCount: pageCount))
+                bookModelArray.append(BookModel(imageLinks: imageLinks, title: title, subTitle: subTitle, category: category, auther: auther, pageCount: pageCount))
             }
         }
         
