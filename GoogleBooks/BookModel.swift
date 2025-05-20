@@ -17,6 +17,7 @@ struct BookModel {
 enum  BookApiError : Error {
     case noData
     case badData
+    case badUrl
 }
 
 class BooksAPIHandler {
@@ -26,20 +27,27 @@ class BooksAPIHandler {
     func getBookListFromGoogleAPI(with completionHandler: @escaping(Result<[BookModel],BookApiError>) -> Void) {
         if let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=jkrowling") {
             let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-                guard let data = data else { return }
+                guard let data = data else {
+                    completionHandler(.failure(.noData))
+                    return
+                }
                 do {
                     let decodedBooksData = try JSONSerialization.jsonObject(with: data, options: [])
                     if let parsedBooksDictionary = decodedBooksData as? Dictionary<String,Any> {
                         let booksArray = self.parseBookItemList(from: parsedBooksDictionary)
+                        completionHandler(.success(booksArray))
                     }
 
                 }
                 catch {
-                    
+                    completionHandler(.failure(.badData))
                 }
             }
 
             task.resume()
+        }
+        else{
+            completionHandler(.failure(.badUrl))
         }
     }
     
