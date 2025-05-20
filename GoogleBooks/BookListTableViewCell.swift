@@ -25,16 +25,16 @@ class BookListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(for book: BookModel) {
+    func configureCell(for book: BookModel ,index: Int) {
         
         if let thumbnailUrlStr = book.imageLinks["smallThumbnail"] {
             bookCoverImageView.sd_setImage(with: URL.init(string: thumbnailUrlStr))
         }
         
-        bookNameLabel.text = book.title
+        bookNameLabel.text = "\(index + 1). " + book.title
         autherLabel.text = book.auther
         
-        getButton.layer.cornerRadius = 5
+        getButton.layer.cornerRadius = 15
         getButton.layer.masksToBounds = true
     }
 }

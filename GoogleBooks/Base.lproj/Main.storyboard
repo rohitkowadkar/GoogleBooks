@@ -19,6 +19,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eyL-SE-33B">
                                 <rect key="frame" x="0.0" y="162" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="80" minY="0.0" maxX="20" maxY="0.0"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3ac-96-36u">
                                 <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>

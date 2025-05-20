@@ -17,6 +17,8 @@ class BookDetailsViewController: UIViewController {
     
     @IBOutlet weak var getButton: UIButton!
     
+    @IBOutlet weak var pagesLabel: UILabel!
+    @IBOutlet weak var buttonsDetailsView: UIView!
     var bookModelObj : BookModel? = nil
     
     @IBOutlet weak var closeButton: UIButton!
@@ -41,9 +43,17 @@ class BookDetailsViewController: UIViewController {
         subtitleLabel.text = bookModelObj.subTitle
         autherNameBtn.setTitle(bookModelObj.auther, for: .normal)
         categoryLabel.text = bookModelObj.category
+        pagesLabel.text = "\(bookModelObj.pageCount) Pages"
         
         closeButton.layer.cornerRadius = 20
         closeButton.layer.masksToBounds = true
+        
+        buttonsDetailsView.layer.cornerRadius = 15
+        buttonsDetailsView.layer.masksToBounds = true
+        
+        getButton.layer.cornerRadius = 5
+        getButton.layer.masksToBounds = true
+
         
     }
     
